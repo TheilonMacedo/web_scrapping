@@ -1,4 +1,3 @@
-import os
 from datetime import date
 
 import pandas as pd
@@ -8,8 +7,8 @@ import plots_monitor as plots_monitor
 
 st.plotly_chart(plots_monitor.plots())
 
-data_usd_brl = pd.read_sql("SELECT * FROM usd_brl", "sqlite:///../..usd_brl.db")
-data_pmi = pd.read_sql("SELECT * FROM pmi", "sqlite:///../../pmi.db")
+data_usd_brl = pd.read_sql("SELECT * FROM usd_brl", "sqlite:///usd_brl.db")
+data_pmi = pd.read_sql("SELECT * FROM pmi", "sqlite:///pmi.db")
 
 
 def get_msg(text: str):
