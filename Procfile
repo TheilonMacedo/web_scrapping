@@ -1,1 +1,2 @@
-web: streamlit run src/de_project/main.py --port $PORT --host 0.0.0.0 
+echo PORT $PORT
+web: sh setup.sh && streamlit --server.port $PORT run src/de_project/main.py
