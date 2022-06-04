@@ -33,10 +33,16 @@ def get_data_pmi():
     )
     driver.get(INVESTING_PAGE_URL)
     time.sleep(10)
-    WebDriverWait(driver, 20).until(
-        EC.element_to_be_clickable((By.XPATH, '//*[@id="onetrust-accept-btn-handler"]'))
-    ).click()
-    time.sleep(5)
+
+    try:
+        WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable(
+                (By.XPATH, '//*[@id="onetrust-accept-btn-handler"]')
+            )
+        ).click()
+        time.sleep(5)
+    except:
+        print("Erro ao chegar ao site.")
 
     logging.info("Getting PMI values...")
 

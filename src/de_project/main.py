@@ -1,3 +1,4 @@
+import os
 from datetime import date
 
 import pandas as pd
@@ -12,9 +13,12 @@ data_pmi = pd.read_sql("SELECT * FROM pmi", "sqlite:///pmi.db")
 
 
 def get_msg(text: str):
+    import dotenv
     import requests
 
-    token = "5436243377:AAEESQRL4LlkmDjcsE_qHFglZqJIk4gzE8I"
+    dotenv.load_dotenv()
+
+    token = os.getenv("token")
     userID = "2078337734"
     message = text
 
