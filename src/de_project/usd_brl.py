@@ -6,6 +6,7 @@ def get_data_usd_brl():
     from typing import List
 
     import pandas as pd
+    import unidecode
     from dotenv import load_dotenv
     from selenium import webdriver
     from selenium.webdriver.common.by import By
@@ -28,9 +29,9 @@ def get_data_usd_brl():
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
-    chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+    # chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
     driver = webdriver.Chrome(
-        executable_path=os.environ.get("CHROMEDRIVER_PATH"),
+        ChromeDriverManager().install(),
         chrome_options=chrome_options,
     )
     driver.get(INVESTING_PAGE_URL)
@@ -86,8 +87,6 @@ def get_data_usd_brl():
     driver.quit()
 
     logging.info("Starting data storing process...")
-
-    import unidecode
 
     names = get[0].split("\n")[0].split(" ")
     headers = [unidecode.unidecode(i) for i in names]
