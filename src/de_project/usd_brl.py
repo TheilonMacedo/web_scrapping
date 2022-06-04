@@ -12,7 +12,6 @@ def get_data_usd_brl():
     from selenium.webdriver.support import expected_conditions as EC
     from selenium.webdriver.support.ui import Select, WebDriverWait
     from sqlalchemy import create_engine
-    from webdriver_manager.chrome import ChromeDriverManager
 
     logging.basicConfig(format="%(levelname)s - %(message)s", level=logging.DEBUG)
 
