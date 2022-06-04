@@ -1,1 +1,1 @@
-web: streamlit run main.py
+web: streamlit run src\de_project\main.py
