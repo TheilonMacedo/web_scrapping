@@ -1,7 +1,6 @@
 altair==4.2.0
 argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
-arrow @ file:///home/conda/feedstock_root/build_artifacts/arrow_1643313750486/work
 attrs==21.4.0
 backcall==0.2.0
 backports.zoneinfo==0.2.1
@@ -19,6 +18,8 @@ click @ file:///C:/ci/click_1646038601470/work
 colorama @ file:///tmp/build/80754af9/colorama_1607707115595/work
 commonmark==0.9.1
 cryptography @ file:///C:/ci/cryptography_1652101770956/work
+cssselect==1.1.0
+cssutils==2.4.1
 debugpy==1.6.0
 decorator==5.1.1
 defusedxml==0.7.1
@@ -65,6 +66,7 @@ pickleshare==0.7.5
 Pillow==9.1.1
 platformdirs==2.5.2
 plotly @ file:///opt/conda/envs/env/conda-bld/plotly_1652143795738/work/packages/python/plotly/dist/plotly-5.8.0.tar.gz
+premailer==3.10.0
 prometheus-client==0.14.1
 prompt-toolkit==3.0.29
 protobuf==3.20.1
@@ -105,6 +107,8 @@ toolz==0.11.2
 tornado==6.1
 traitlets==5.2.2.post1
 typed-ast==1.5.4
+types-requests==2.27.30
+types-urllib3==1.26.15
 typing_extensions @ file:///opt/conda/conda-bld/typing_extensions_1647553014482/work
 tzdata==2022.1
 tzlocal==4.2
@@ -113,8 +117,10 @@ urllib3 @ file:///tmp/build/80754af9/urllib3_1603305693037/work
 validators==0.19.0
 watchdog==2.1.8
 wcwidth==0.2.5
+webdriver-manager==3.7.0
 webencodings==0.5.1
 widgetsnbextension==3.6.0
 win-inet-pton @ file:///C:/ci/win_inet_pton_1605306165655/work
 wincertstore==0.2
+yagmail==0.15.277
 zipp @ file:///C:/ci/zipp_1652274072582/work
