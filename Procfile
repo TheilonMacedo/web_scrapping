@@ -1,1 +1,1 @@
-worker: streamlit run src/de_project/main.py
+web: streamlit run src/de_project/main.py --port $PORT --host 0.0.0.0 
