@@ -29,7 +29,7 @@ def get_data_usd_brl():
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--no-sandbox")
     driver = webdriver.Chrome(
-        executable_path=os.environ.get(ChromeDriverManager().install()),
+        ChromeDriverManager().install(),
         chrome_options=chrome_options,
     )
     driver.get(INVESTING_PAGE_URL)
