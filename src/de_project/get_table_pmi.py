@@ -44,7 +44,7 @@ def get_data_pmi():
                 (By.XPATH, '//*[@id="onetrust-accept-btn-handler"]')
             )
         ).click()
-        time.sleep(2)
+        time.sleep(60)
     except:
         print("Erro ao chegar ao site.")
 

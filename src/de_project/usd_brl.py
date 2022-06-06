@@ -43,7 +43,7 @@ def get_data_usd_brl():
     WebDriverWait(driver, 30).until(
         EC.element_to_be_clickable((By.XPATH, '//*[@id="onetrust-accept-btn-handler"]'))
     ).click()
-    time.sleep(2)
+    time.sleep(60)
 
     WebDriverWait(driver, 20).until(
         EC.element_to_be_clickable((By.XPATH, '//*[@id="userAccount"]/div/a[1]'))
