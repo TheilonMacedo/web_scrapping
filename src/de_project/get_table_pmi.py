@@ -1,3 +1,6 @@
+from time import sleep
+
+
 def get_data_pmi():
     import logging
     import os
@@ -132,7 +135,7 @@ def get_data_pmi():
     write_to_disk(final_data)
 
     logging.info("Data stored successfully.")
-
+    sleep(10)
 
 if __name__ == "__main__":
     get_data_pmi()

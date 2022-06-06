@@ -35,7 +35,7 @@ def get_data_usd_brl():
     options.add_argument("--disable-gpu")
     options.add_argument("--remote-debugging-port=9222")
     options.add_argument("start-maximized")
-    print("Teste")
+    logging.info("Webdriver iniciando")
     driver = webdriver.Chrome(
         service=Service(ChromeDriverManager().install()), options=options
     )
