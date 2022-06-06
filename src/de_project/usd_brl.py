@@ -34,7 +34,7 @@ def get_data_usd_brl():
     chrome_options.add_argument("--remote-debugging-port=9222")
     chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
     driver = webdriver.Chrome(
-        ChromeDriverManager().install(),
+        executable_path=os.environ.get("CHROMEDRIVER_PATH"),
         chrome_options=chrome_options,
     )
     driver.get(INVESTING_PAGE_URL)
