@@ -39,12 +39,12 @@ def get_data_pmi():
     time.sleep(10)
 
     try:
-        WebDriverWait(driver, 20).until(
+        WebDriverWait(driver, 2).until(
             EC.element_to_be_clickable(
                 (By.XPATH, '//*[@id="onetrust-accept-btn-handler"]')
             )
         ).click()
-        time.sleep(5)
+        time.sleep(2)
     except:
         print("Erro ao chegar ao site.")
 
