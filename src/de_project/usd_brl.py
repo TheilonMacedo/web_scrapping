@@ -9,6 +9,7 @@ def get_data_usd_brl():
     import unidecode
     from dotenv import load_dotenv
     from selenium import webdriver
+    from selenium.webdriver.chrome.options import Options
     from selenium.webdriver.chrome.service import Service
     from selenium.webdriver.common.by import By
     from selenium.webdriver.support import expected_conditions as EC
@@ -25,14 +26,12 @@ def get_data_usd_brl():
     EMAIL = os.getenv("Email")
     INVESTING_PAGE_URL = "https://br.investing.com/currencies/usd-brl-historical-data"
 
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-    chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument("--disable-dev-shm-usage")
-    chrome_options.add_argument("window-size=1920x1080")
-    chrome_options.add_argument("--disable-gpu")
-    chrome_options.add_argument("--remote-debugging-port=9222")
+    options = Options()
+    options.add_argument("start-maximized")
+    driver = webdriver.Chrome(
+        service=Service(ChromeDriverManager().install()), options=options
+    )
+    driver.get("https://www.google.com")
     print("Teste")
 
     #     driver = webdriver.Chrome(
