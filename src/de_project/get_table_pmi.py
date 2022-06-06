@@ -43,10 +43,10 @@ def get_data_pmi():
     driver.get(INVESTING_PAGE_URL)
     time.sleep(10)
 
-    WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.XPATH, '//*[@id="onetrust-accept-btn-handler"]'))
-    ).click()
-    time.sleep(2)
+    # WebDriverWait(driver, 10).until(
+    #     EC.element_to_be_clickable((By.XPATH, '//*[@id="onetrust-accept-btn-handler"]'))
+    # ).click()
+    # time.sleep(2)
 
     logging.info("Getting PMI values...")
 
