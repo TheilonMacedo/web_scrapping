@@ -8,6 +8,7 @@ def get_data_pmi():
     import numpy as np
     import pandas as pd
     from selenium import webdriver
+    from selenium.webdriver.chrome.options import Options
     from selenium.webdriver.chrome.service import Service
     from selenium.webdriver.common.by import By
     from selenium.webdriver.support import expected_conditions as EC
@@ -23,18 +24,18 @@ def get_data_pmi():
         "https://www.investing.com/economic-calendar/chinese-caixin-services-pmi-596"
     )
 
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-    chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument("--disable-dev-shm-usage")
-    chrome_options.add_argument("window-size=1920x1080")
-    chrome_options.add_argument("--disable-gpu")
-    chrome_options.add_argument("--remote-debugging-port=9222")
+    options = Options()
+    options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+    options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("window-size=1920x1080")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--remote-debugging-port=9222")
+    options.add_argument("start-maximized")
     print("Teste")
     driver = webdriver.Chrome(
-        executable_path=os.environ.get("CHROMEDRIVER_PATH"),
-        chrome_options=chrome_options,
+        service=Service(ChromeDriverManager().install()), options=options
     )
     driver.get(INVESTING_PAGE_URL)
     time.sleep(10)
