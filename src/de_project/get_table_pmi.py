@@ -60,6 +60,7 @@ def get_data_pmi():
     for i in body:
         get = pd.Series(i.text)
 
+    driver.close()
     driver.quit()
 
     logging.info("Starting data storing process...")
