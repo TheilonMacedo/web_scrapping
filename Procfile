@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run src/de_project/main.py
+web: sudo apt-get install -y chromium-browser && streamlit run src/de_project/main.py
