@@ -8,7 +8,7 @@ import plots_monitor as plots_monitor
 
 st.plotly_chart(plots_monitor.plots())
 
-# data_usd_brl = pd.read_sql("SELECT * FROM usd_brl", "sqlite:///usd_brl.db")
+data_usd_brl = pd.read_sql("SELECT * FROM usd_brl", "sqlite:///usd_brl.db")
 data_pmi = pd.read_sql("SELECT * FROM pmi", "sqlite:///pmi.db")
 
 
@@ -32,13 +32,13 @@ def get_msg(text: str):
     requests.post(url, data)
 
 
-# dolar_actual = float(data_usd_brl["Ultimo"][0].replace(",", "."))
+dolar_actual = float(data_usd_brl["Ultimo"][0].replace(",", "."))
 
-# if dolar_actual < 4.5:
-#     get_msg(
-#         f"""{date.today()}: Investment notification:
-# Dolar lower than 4,5: this month value U${dolar_actual}"""
-#     )
+if dolar_actual < 4.5:
+    get_msg(
+        f"""{date.today()}: Investment notification:
+Dolar lower than 4,5: this month value U${dolar_actual}"""
+    )
 if data_pmi["actual"][1] < 50:
     get_msg(
         f"""{date.today()}: Investment notification:
