@@ -1,1 +1,1 @@
-worker: streamlit run src/de_project/usd_brl.py
+worker: streamlit run src/de_project/main2.py
