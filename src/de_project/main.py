@@ -55,13 +55,12 @@ dolar_actual = float(data_usd_brl["Ultimo"][0].replace(",", "."))
 
 send_plots()
 
-if dolar_actual < 4.5:
-    send_msg(
-        f"""{date.today()}: Notificação de índices:
+send_msg(
+    f"""{date.today()}: Notificação de índices:
 Dólar menor que 4,5: valor atual U${dolar_actual}"""
-    )
-if data_pmi["actual"][1] < 50:
-    send_msg(
-        f"""{date.today()}: Notificação de índices:
+)
+
+send_msg(
+    f"""{date.today()}: Notificação de índices:
 PMI menor que 50%: valor atual {data_pmi["actual"][1]}%"""
-    )
+)
