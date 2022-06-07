@@ -6,6 +6,8 @@ import streamlit as st
 
 import plots_monitor as plots_monitor
 
+plots = plots_monitor.plots()
+
 data_usd_brl = pd.read_sql("SELECT * FROM usd_brl", "sqlite:///usd_brl.db")
 data_pmi = pd.read_sql("SELECT * FROM pmi", "sqlite:///pmi.db")
 
@@ -44,4 +46,4 @@ PMI lower than 50%: this month value {data_pmi["actual"][1]}%"""
     )
 
 
-st.plotly_chart(plots_monitor.plots())
+st.plotly_chart(plots)
