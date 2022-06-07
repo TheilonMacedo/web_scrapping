@@ -45,5 +45,6 @@ if data_pmi["actual"][1] < 50:
 PMI lower than 50%: this month value {data_pmi["actual"][1]}%"""
     )
 
+get_msg("Indexe's time series: https://keepupstocksapp.herokuapp.com/")
 
 st.plotly_chart(plots)
