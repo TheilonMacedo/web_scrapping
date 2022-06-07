@@ -22,8 +22,8 @@ def get_data_usd_brl():
     logging.info("Starting to perform data collection...")
 
     load_dotenv()
-    SENHA = os.getenv("Senha")
-    EMAIL = os.getenv("Email")
+    SENHA = os.environ.get("Senha")
+    EMAIL = os.environ.get("Email")
     INVESTING_PAGE_URL = "https://br.investing.com/currencies/usd-brl-historical-data"
 
     options = Options()

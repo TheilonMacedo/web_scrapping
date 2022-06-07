@@ -18,7 +18,7 @@ def get_msg(text: str):
 
     dotenv.load_dotenv()
 
-    token = os.getenv("token")
+    token = os.environ.get("token")
     userID = "2078337734"
     message = text
 
