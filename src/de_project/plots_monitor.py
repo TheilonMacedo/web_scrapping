@@ -109,8 +109,3 @@ def plots():
     )
     fig.write_html("plots.html")
     return fig
-
-    # # fig.show()
-    # import streamlit as st
-
-    # st.plotly_chart(fig)

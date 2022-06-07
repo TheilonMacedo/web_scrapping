@@ -2,7 +2,6 @@ import os
 from datetime import date
 
 import pandas as pd
-import streamlit as st
 
 import plots_monitor as plots_monitor
 
@@ -66,6 +65,3 @@ if data_pmi["actual"][1] < 50:
         f"""{date.today()}: Notificação de índices:
 PMI menor que 50%: valor atual {data_pmi["actual"][1]}%"""
     )
-
-
-st.plotly_chart(plots)
