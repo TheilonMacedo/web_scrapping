@@ -26,10 +26,11 @@ def get_msg(text: str):
     url = f"https://api.telegram.org/bot{token}/sendMessage"
 
     # Create json link with message
-    data = {"chat_id": userID, "text": message}
+    data = {"chat_id": userID, "text": message, "document": "attach://file"}
+    file = {"file": open("plots.html", "rb")}
 
     # POST the message
-    requests.post(url, data)
+    requests.post(url, data, files=file)
 
 
 dolar_actual = float(data_usd_brl["Ultimo"][0].replace(",", "."))
@@ -45,6 +46,5 @@ if data_pmi["actual"][1] < 50:
 PMI menor que 50%: valor atual {data_pmi["actual"][1]}%"""
     )
 
-get_msg("Indexe's time series: https://keepupstocksapp.herokuapp.com/")
 
 st.plotly_chart(plots)

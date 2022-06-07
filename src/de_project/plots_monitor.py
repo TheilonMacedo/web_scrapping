@@ -107,7 +107,7 @@ def plots():
     fig.update_yaxes(
         title_text="USD/BRL - Dólar Americano - Real Brasileiro", col=2, row=1
     )
-
+    fig.write_html("plots.html")
     return fig
 
     # # fig.show()
