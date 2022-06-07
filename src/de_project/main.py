@@ -36,13 +36,13 @@ dolar_actual = float(data_usd_brl["Ultimo"][0].replace(",", "."))
 
 if dolar_actual < 4.5:
     get_msg(
-        f"""{date.today()}: Investment notification:
-Dolar lower than 4,5: this month value U${dolar_actual}"""
+        f"""{date.today()}: Notificação de índices:
+Dólar menor que 4,5: valor atual U${dolar_actual}"""
     )
 if data_pmi["actual"][1] < 50:
     get_msg(
-        f"""{date.today()}: Investment notification:
-PMI lower than 50%: this month value {data_pmi["actual"][1]}%"""
+        f"""{date.today()}: Notificação de índices:
+PMI menor que 50%: valor atual {data_pmi["actual"][1]}%"""
     )
 
 get_msg("Indexe's time series: https://keepupstocksapp.herokuapp.com/")

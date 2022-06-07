@@ -94,7 +94,7 @@ def plots():
     )
 
     fig.update_layout(
-        title="Índice de atividade dos gerentes de compras (PMI) Serviços Caixin",
+        title="Índices Monitorados - PMI e cotação USD",
         title_font_family="Droid Sans Mono",
         title_font_size=20,
         showlegend=False,
@@ -105,7 +105,7 @@ def plots():
         title_text="Índice de Gerentes de Compras (PMI) da Caixin", col=1, row=1
     )
     fig.update_yaxes(
-        title_text="USD/BRL - Dólar Americano Real Brasileiro", col=2, row=1
+        title_text="USD/BRL - Dólar Americano - Real Brasileiro", col=2, row=1
     )
 
     return fig
