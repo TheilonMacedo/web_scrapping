@@ -1,1 +1,1 @@
-worker: sh setup.sh && streamlit run src/de_project/main.py
+clock: python src/de_project/main.py
