@@ -7,7 +7,7 @@ sched = BlockingScheduler()
 
 
 @sched.scheduled_job(
-    "cron", day_of_week="wed", hour=21, minute=25, timezone="America/Bahia"
+    "cron", day_of_week="wed", hour=21, minute=33, timezone="America/Bahia"
 )
 def scheduled_job():
     send()
